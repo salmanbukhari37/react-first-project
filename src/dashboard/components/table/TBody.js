@@ -2,6 +2,7 @@ import React from "react";
 import TBodyList from "./TBodyList";
 
 const TBody = ({tBodyData, tHeadData}) => {
+    console.log(tHeadData);
     return (
         <tbody>
             {Array.isArray(tBodyData) && tBodyData.length > 0 && tBodyData.map(({rollNumber, name, email, phone, semester, year, batch, gpa}) => {

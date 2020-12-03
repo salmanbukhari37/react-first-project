@@ -23,48 +23,22 @@ class Professors extends React.Component {
                 date: "2020-11-02",
             },
         ],
-        tableHead: [
-            {id: "rollNumber", value: "Roll Number"},
-            {id: "name", value: "Name"},
-            {id: "email", value: "Email"},
-            {id: "phone", value: "Phone"},
-            {id: "semester", value: "Semester"},
-            {id: "year", value: "Year"},
-            {id: "batch", value: "Batch"},
-            {id: "gpa", value: "GPA"},
-        ],
         tableBody: [
             {
-                rollNumber: 1,
-                name: "Salman",
-                email: "salmanbukhari37@gmail.com",
-                phone: "03349081615",
-                semester: "1st",
-                year: 2020,
-                batch: 1,
-                gpa: "3.3"
-            },
-            {
-                rollNumber: 123,
-                name: "Ketly",
-                email: "ketly@gmail.com",
-                phone: "03349081615",
-                semester: "2st",
-                year: 2020,
-                batch: 1,
-                gpa: "3.9"
-            },
-            {
-                rollNumber: 123,
-                name: "Ketly",
-                email: "ketly@gmail.com",
-                phone: "03349081615",
-                semester: "2st",
-                year: 2020,
-                batch: 1,
-                gpa: "3.9"
+                "Roll Number": 1,
+                "Name": "Salman",
+                "Email": "salmanbukhari37@gmail.com",
+                "phone": "03349081615",
+                "Semester": "1st",
+                "Year": 2020,
+                "Batch": 1,
+                "GPA": "3.3"
             }
         ]
+    }
+
+    getKeys = () => {
+        return Object.keys(this.state.tableBody[0]);
     }
 
     increment = () => {
@@ -92,6 +66,7 @@ class Professors extends React.Component {
     }
 
     render () {
+        console.log();
         return (
             <section>
                 <input type="text" value={this.state.initialMultiplyVal} onChange={(e) => this.inputChangeHandler(e)} />
@@ -102,7 +77,7 @@ class Professors extends React.Component {
                 <Button clsName="btn btn-primary" btnText="+" changeHandler={this.increment}/>
                 <Button clsName="btn btn-info" btnText="Result" changeHandler={this.multiply}/>
 
-                <Table tHead={this.state.tableHead} tBody={this.state.tableBody}/>
+                <Table tHead={this.getKeys()} tBody={this.state.tableBody}/>
                 <Table tHead={this.state.tableHead} tBody={this.state.tableBody}/>
                 {/* <Button clsName={this.state.button.cls} changeColor={this.changeButtonColorHandler} /> */}
             </section>

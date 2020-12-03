@@ -2,7 +2,7 @@ import React from "react";
 
 const THeadList = (props) => {
     return (
-        <th>{props.thName}</th>
+        <th>{props.thName.toUpperCase()}</th>
     );
 }
 
