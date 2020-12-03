@@ -1,6 +1,6 @@
 import './scss/main.scss';
 
-import Professors from "./dashboard/containers/Professors";
+import Salesheet from "./dashboard/containers/Salesheet";
 // container
 // dumb components
 // pure functions
@@ -8,7 +8,7 @@ import Professors from "./dashboard/containers/Professors";
 
 function App() {
   return (
-    <Professors />
+    <Salesheet />
   );
 }
 
