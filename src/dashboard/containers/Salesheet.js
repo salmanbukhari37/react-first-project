@@ -25,7 +25,10 @@ class Salesheet extends React.Component {
 
     render () {
         return (
-            <Weather weathers={this.state.weathers} />
+            <div>
+                <Weather weathers={this.state.weathers} />
+                <Panel />
+            </div>
         );
     }
 }
