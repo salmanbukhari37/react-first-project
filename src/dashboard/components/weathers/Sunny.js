@@ -6,8 +6,8 @@ const Sunny = ({title, city, country, temperature, degrees, futureDaysData}) => 
                 <div class="top">
                     <div class="wrapper">
                         <div class="mynav">
-                            <a href="javascript:;"><span class="lnr lnr-chevron-left"></span></a>
-                            <a href="javascript:;"><span class="lnr lnr-cog"></span></a>
+                            {/* <a href="javascript:;"><span class="lnr lnr-chevron-left"></span></a>
+                            <a href="javascript:;"><span class="lnr lnr-cog"></span></a> */}
                         </div>
                         <h1 class="heading">{title}</h1>
                         <h3 class="location">{city}, {country}</h3>
