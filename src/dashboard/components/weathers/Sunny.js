@@ -5,8 +5,8 @@ const Sunny = ({title, city, country, temprature, degrees}) => {
                 <div class="top">
                     <div class="wrapper">
                         <div class="mynav">
-                            <a href="javascript:;"><span class="lnr lnr-chevron-left"></span></a>
-                            <a href="javascript:;"><span class="lnr lnr-cog"></span></a>
+                            {/* <a href="javascript:;"><span class="lnr lnr-chevron-left"></span></a>
+                            <a href="javascript:;"><span class="lnr lnr-cog"></span></a> */}
                         </div>
                         <h1 class="heading">{title}</h1>
                         <h3 class="location">{city}, {country}</h3>
@@ -20,7 +20,7 @@ const Sunny = ({title, city, country, temprature, degrees}) => {
                 <div class="bottom">
                     <div class="wrapper">
                         <ul class="forecast">
-                            <a href="javascript:;"><span class="lnr lnr-chevron-up go-up"></span></a>
+                            {/* <a href="javascript:;"><span class="lnr lnr-chevron-up go-up"></span></a> */}
                             <li class="active">
                                 <span class="date">Yesterday</span>
                                 <span class="lnr lnr-sun condition">

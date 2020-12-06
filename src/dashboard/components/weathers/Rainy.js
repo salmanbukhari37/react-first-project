@@ -1,20 +1,21 @@
 import React from "react";
 
-const Rainy = () => {
+const Rainy = ({title, city, country, temprature, degrees}) => {
+    
     return (
         <div class="weather-card rain">
             <div class="top">
                 <div class="wrapper">
-                    <div class="mynav">
-                        <a href="javascript:;"><span class="lnr lnr-chevron-left"></span></a>
-                        <a href="javascript:;"><span class="lnr lnr-cog"></span></a>
+                    <div class="mynav"> 
+                        {/* <a href="javascript:;"><span class="lnr lnr-chevron-left"></span></a>
+                        <a href="javascript:;"><span class="lnr lnr-cog"></span></a> */}
                     </div>
-                    <h1 class="heading">Rainy day</h1>
-                    <h3 class="location">Sylhet, Bangladesh</h3>
+                    <h1 class="heading">{title}</h1>
+                    <h3 class="location">{city}, {country}</h3>
                     <p class="temp">
-                        <span class="temp-value">16</span>
+                        <span class="temp-value">{temprature}</span>
                         <span class="deg">0</span>
-                        <a href="javascript:;"><span class="temp-type">C</span></a>
+                        <a href="javascript:;"><span class="temp-type">{degrees}</span></a>
                     </p>
                 </div>
             </div>
