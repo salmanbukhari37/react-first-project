@@ -1,6 +1,7 @@
 import React from "react";
+import Panel from "../Panel";
 
-const Sunny = ({title, city, country, temprature, degrees}) => {
+const Sunny = ({title, city, country, temperature, degrees, futureDaysData}) => {
     return (<div class="weather-card one">
                 <div class="top">
                     <div class="wrapper">
@@ -11,7 +12,7 @@ const Sunny = ({title, city, country, temprature, degrees}) => {
                         <h1 class="heading">{title}</h1>
                         <h3 class="location">{city}, {country}</h3>
                         <p class="temp">
-                            <span class="temp-value">{temprature}</span>
+                            <span class="temp-value">{temperature}</span>
                             <span class="deg">0</span>
                             <a href="javascript:;"><span class="temp-type">{degrees}</span></a>
                         </p>
@@ -21,21 +22,17 @@ const Sunny = ({title, city, country, temprature, degrees}) => {
                     <div class="wrapper">
                         <ul class="forecast">
                             <a href="javascript:;"><span class="lnr lnr-chevron-up go-up"></span></a>
-                            <li class="active">
-                                <span class="date">Yesterday</span>
-                                <span class="lnr lnr-sun condition">
-                                    <span class="temp">23<span class="deg">0</span><span class="temp-type">C</span></span>
+                            {Array.isArray(futureDaysData) && futureDaysData.length > 0 && futureDaysData.map(({day, temperature, degrees, weatherClass}, index) => <li class={index < 1 ? "active" : ""}>
+                                <span class="date">{day}</span>
+                                <span class={weatherClass}>
+                                <span class="temp">{temperature}<span class="deg">0</span><span class="temp-type">{degrees}</span></span>
                                 </span>
-                            </li>
-                            <li>
-                                <span class="date">Tomorrow</span>
-                                <span class="lnr lnr-cloud condition">
-                                    <span class="temp">21<span class="deg">0</span><span class="temp-type">C</span></span>
-                                </span>
-                            </li>
+                            </li>)}
+                            
                         </ul>
                     </div>
                 </div>
+                {/* <Panel title={title} description={city}/> */}
             </div>);
 }
 

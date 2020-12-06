@@ -8,7 +8,7 @@ import Salesheet from "./dashboard/containers/Salesheet";
 
 function App() {
   return (
-    <Salesheet />
+      <Salesheet />
   );
 }
 
